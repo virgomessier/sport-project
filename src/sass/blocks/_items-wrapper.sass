@@ -1,6 +1,9 @@
 .items-wrapper
-    display: flex
+    display: none
     justify-content: space-around
+    flex-wrap: wrap
+    &_active
+        display: flex
     &__items
         width: 303px
         min-height: 442px
@@ -10,6 +13,38 @@
         align-items: center
         border: 1px solid #E8E8E8
         padding: 20px 20px 26px 20px
+        margin-bottom: 20px
+    &__content
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        &_unactive
+            display: none
+    &__list
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+        ul
+            color: #555
+            font-size: 14px
+            font-weight: 300
+            line-height: 21px
+        li
+            padding-top: 5px
+            color: $main-color
+            span
+                color: #000
+        &-link
+            font-size: 14px
+            color: $main-color
+            padding-top: 55px
+            &:hover
+                color: $main-color
+        &_unactive
+            display: none
+
     &__img
         max-width: 100%
         height: 200px
