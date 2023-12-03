@@ -24,6 +24,21 @@ $(document).ready(function () {
 
     toggleSlide('.items-wrapper__more');
     toggleSlide('.items-wrapper__list-link');
+
+    // Modal
+
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay, #consultation').fadeIn('fast');
+    });
+    $('.modal__close').on('click', function() {
+        $('.overlay, #consultation, #order, #thanks').fadeOut('fast');
+    });
+    $('.button_buy').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal__descr').text($('.items-wrapper__main-text').eq(i).text());
+            $('.overlay, #order').fadeIn('fast');
+        });
+    });
 });
 
 const slider = tns({
