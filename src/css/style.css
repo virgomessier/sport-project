@@ -663,6 +663,19 @@
   display: none;
 }
 
+.pageup {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 50px;
+  width: 50px;
+  height: 40px;
+}
+.pageup img {
+  width: 100%;
+  border: none;
+}
+
 @media (max-width: 1024px) {
   .promo {
     padding: 21px 5px 93px 5px;
